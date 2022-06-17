@@ -68,7 +68,7 @@ basicCC <- ggplot(dd2,aes(x=race,y=prcnt*100,fill=cappun))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
-
+From the data above it would seem as though the whites have the most favor towards cappun(Capital Punishment) with other coming in second and blacks coming in last. while those who oppose the most would be blacks, again the other races being in 2nd and whites being last by a considerable margin.
 
 ### Numerical Descriptive Results
 
@@ -84,6 +84,7 @@ table2 <- xtabs(~race + cappun, data=mydata)
 rowPerc(table2)
 colPerc(table2)
 ```
+using more data to a better fixed number this chart displays a more accurate and frontal chart of data that the boxplot doesn't have. showing the differences in each race's variable  
 
 
 ## Inferential Results
@@ -102,11 +103,16 @@ fisher.test(table2)
 #fisherXY(mydata$race,mydata$cappun)
 ```
 
+The p-value for the Chi-squared test was).holy crap that's a lot of 0's it was quite small so we must reject the null hypothesis.  
+
 ```{r}
 fisherXY(mydata$cappun,mydata$race)
 ```
  
+this p-Value is less than 0.5 and is actually 0.02 etc. that means that the Value is smaller than the anticipated number meaning we reject the null hyopthesis.
 
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+
+In conclusion the question was if the views of Capital Punishment independent from race or not. and after tallying the data through all outcomes and charts we found out that yes there is a substantial difference between the races that are dependent on their views of Capital Punishment  .
